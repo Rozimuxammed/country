@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* user-select: none; */
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(27, 33, 79);
+    box-shadow: 0px 0px 15px 5px rgb(15, 13, 13);
+    position: fixed;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    transition: all .3s ease;
+}
+
+.night nav {
+    background-color: rgb(0, 9, 53);
+    box-shadow: 0px 4px 10px 0px rgb(157, 153, 153);
+}
+
+.mode,
+.dark_mode {
+    width: 60px;
+    height: 30px;
+    background-color: rgb(73, 73, 73);
+    cursor: pointer;
+    border-radius: 30px;
+    position: relative;
+}
+
+.night .mode {
+    background-color: rgb(248, 248, 248);
+}
+
+.mode span {
+    width: 23px;
+    height: 23px;
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    border-radius: 50%;
+    top: 3.5px;
+    left: 3.5px;
+    transition: all .3s ease;
+    color: rgb(73, 73, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark_mode span {
+    width: 23px;
+    height: 23px;
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    border-radius: 50%;
+    top: 3.5px;
+    left: 3.5px;
+    transition: all .4s ease;
+    color: rgb(73, 73, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active .dark_mode span {
+    left: 34px;
+}
+
+.night .mode span {
+    left: 34px;
+    box-shadow: 1px 1px 10px -2px black;
+}
+
+.moon,
+.sun {
+    display: none !important;
+}
+
+.moon {
+    display: block !important;
+}
+
+.night .moon {
+    display: none !important;
+}
+
+.night .sun {
+    display: block !important;
+    font-size: 13px;
+}
+
+nav .text {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.inputIcon i {
+    position: absolute;
+    left: 20px;
+    font-size: 15px;
+    color: white;
+    z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(22, 27, 64);
+    transition: all .3s ease;
+}
+
+.night header {
+    background-color: rgb(0, 4, 36);
+}
+
+.search {
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    display: flex;
+    position: fixed;
+    padding: 0 10px;
+}
+
+.inputIcon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    position: relative;
+    border: 1px solid rgb(78, 69, 69);
+    width: 200px;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: rgb(22, 27, 64);
+    outline: none;
+    color: whitesmoke;
+}
+
+select {
+    border: 1px solid rgb(78, 69, 69);
+    width: 200px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: rgb(22, 27, 64);
+    outline: none;
+    color: whitesmoke;
+    text-align: justify;
+    cursor: pointer;
+}
+
+section {
+    padding: 180px 0;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.newcountry {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 200px 20px;
+}
+
+.newcountry .country_image {
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0px 10px 0 black, ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.newcountry .country_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.newcountry .about_country {
+    width: 600px;
+    padding: 20px;
+    line-height: 35px;
+    font-family: sans-serif;
+}
+
+.newcountry .about_country h1 {
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+.about_country span {
+    color: blue;
+    letter-spacing: 1px;
+}
+
+.about_country h2 {
+    color: darkred;
+}
+
+.active .newcountry .country_image {
+    box-shadow: 0 0px 10px 0 white;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+    line-height: 40px;
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: rgb(235, 232, 232);
+    box-shadow: 0px 4px 10px 0px rgb(157, 153, 153);
+    transition: all .3s ease;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.active {
+    background-color: black;
+}
+
+.active .navbar {
+    box-shadow: 0 0 10px 0 white;
+
+}
+
+.active .navbar p {
+    color: white;
+}
+
+.navbar {
+    background-color: transparent;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.navbar p {
+    color: black;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.night .card {
+    background-color: rgb(22, 26, 60);
+    color: white;
+}
+
+.dark {
+    background-color: black;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+@media (max-width:320px) {
+    nav {
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+
+    nav .text {
+        font-size: 15px;
+        justify-content: left;
+    }
+
+    .mode {
+        width: 40px;
+        height: 20px;
+    }
+
+    .mode span {
+        width: 17px;
+        height: 17px;
+        top: 1.5px;
+        left: 2.5px;
+    }
+
+    .night .mode span {
+        left: 21px;
+        box-shadow: 1px 1px 10px -2px black;
+    }
+
+    .night .sun {
+        display: block !important;
+        font-size: 10px;
+    }
+
+    .moon {
+        display: block !important;
+        font-size: 10px;
+    }
+
+    .search {
+        flex-wrap: wrap;
+        margin-left: 0px;
+        gap: 10px;
+    }
+
+    input {
+        width: 150px;
+        padding: 5px 35px;
+    }
+
+    select {
+        width: 150px;
+        padding: 6px 10px;
+    }
+
+    .inputIcon i {
+        left: 23px;
+        font-size: 13px;
+    }
+
+    .card {
+        width: 300px;
+        height: 360px;
+        padding: 15px;
+        font-size: 11px;
+        line-height: 19px;
+    }
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(12, 29, 84, 0.81);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    flex-direction: column;
+}
+
+.loader h1 {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+.loader img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.loader.active {
+    display: flex;
+}
+
+#map {
+    height: 100%;
+}
+
+@media (max-width:400px) {
+    .card {
+        width: 300px;
+        height: 360px;
+        padding: 15px;
+        font-size: 11px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width:700px) {
+    nav {
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+}
